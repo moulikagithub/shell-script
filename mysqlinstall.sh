@@ -5,10 +5,10 @@ id=$(id -u)
 validate(){
     if [ $1 -ne 0 ]
 then
-     echo "error :: $2 failed "
+     echo "error :: $2.... failed "
      exit 1
 else
-     echo "Installation of $0  $2 sucess"
+     echo " $2.... sucess"
 fi
 
 }
@@ -22,6 +22,6 @@ else
 fi
 
 yum install mysql -y
-validate $? "mysql"
+validate $? "installing mysql"
 yum install git -y
-validate $? "git"
+validate $? "installing git"
