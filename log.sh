@@ -9,10 +9,10 @@ n="\e[0m"
 validate(){
     if [ $1 -ne 0 ]
 then
-     echo "$r error:: $2....  failed $n "
+     echo -e "$r error:: $2....  failed $n "
      exit 1
 else
-     echo " $2.... $g sucess"
+     echo -e " $2.... $g sucess $n"
 fi
 
 }
