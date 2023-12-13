@@ -23,5 +23,5 @@ fi
 
 yum install mysql -y
 validate $? "mysql"
-yum install git -y
+yum install gitt -y
 validate $? "git"
