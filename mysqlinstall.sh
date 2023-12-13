@@ -12,12 +12,19 @@ fi
 
 yum install mysql -y
 
-st=$(echo $?)
-
-if [ $st -ne 0 ]
+if [ $? -ne 0 ]
 then
      echo "error :: cannot install mysql"
      exit 1
 else
      echo "Installation of mysql sucess"
+fi
+yum install gitt -y
+
+if [ $? -ne 0 ]
+then
+     echo "error :: cannot install git"
+     exit 1
+else
+     echo "Installation of git sucess"
 fi
