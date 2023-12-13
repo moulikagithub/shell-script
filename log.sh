@@ -25,7 +25,7 @@ else
      echo "Root User"
 fi
 
-yum install mysql -y &>> $log_file
+yum install myslql -y &>> $log_file
 validate $? "installing mysql"
 yum install git -y &>> $log_file
 validate $? "installing git"
