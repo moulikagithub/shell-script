@@ -6,6 +6,8 @@ log_file="/tmp/$0-$timestamp.log"
 r="\e[31m"
 g="\e[32m"
 n="\e[0m"
+
+echo "script started excuting at: $timestamp" &>> $log_file
 validate(){
     if [ $1 -ne 0 ]
 then
