@@ -2,6 +2,17 @@
 
 id=$(id -u)
 
+validate(){
+    if [ $? -ne 0 ]
+then
+     echo "error :: cannot install "
+     exit 1
+else
+     echo "Installation sucess"
+fi
+
+}
+
 if [ $id -ne 0 ]
 then
      echo "Get root acess to run the script"
@@ -11,20 +22,6 @@ else
 fi
 
 yum install mysql -y
-
-if [ $? -ne 0 ]
-then
-     echo "error :: cannot install mysql"
-     exit 1
-else
-     echo "Installation of mysql sucess"
-fi
+validate
 yum install git -y
-
-if [ $? -ne 0 ]
-then
-     echo "error :: cannot install git"
-     exit 1
-else
-     echo "Installation of git sucess"
-fi
+validate
