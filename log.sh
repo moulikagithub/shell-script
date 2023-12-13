@@ -2,7 +2,7 @@
 
 id=$(id -u)
 timestamp=$(date +%F-%H-%M-%S)
-log_file="/tmp/$o-$timestamp.log"
+log_file="/tmp/$0-$timestamp.log"
 validate(){
     if [ $1 -ne 0 ]
 then
