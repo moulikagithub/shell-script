@@ -3,13 +3,16 @@
 id=$(id -u)
 timestamp=$(date +%F-%H-%M-%S)
 log_file="/tmp/$0-$timestamp.log"
+r="/e[31m"
+g="/e[32m"
+n="/e[0m"
 validate(){
     if [ $1 -ne 0 ]
 then
-     echo "error :: $2.... failed "
+     echo "$rerror$n :: $2.... $rfailed "
      exit 1
 else
-     echo " $2.... sucess"
+     echo " $2.... $gsucess"
 fi
 
 }
