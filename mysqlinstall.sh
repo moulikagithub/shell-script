@@ -12,7 +12,9 @@ fi
 
 yum install mysql -y
 
-if [ $? -ne 0 ]
+st=$(echo $?)
+
+if [ $st -ne 0 ]
 then
      echo "error :: cannot install mysql"
      exit 1
