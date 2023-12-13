@@ -8,7 +8,7 @@ then
      echo "error :: $2 failed "
      exit 1
 else
-     echo "Installation of $2 sucess"
+     echo "Installation of $0  $2 sucess"
 fi
 
 }
@@ -23,5 +23,5 @@ fi
 
 yum install mysql -y
 validate $? "mysql"
-yum install gitt -y
+yum install git -y
 validate $? "git"
