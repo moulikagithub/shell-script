@@ -9,10 +9,10 @@ n="/e[0m"
 validate(){
     if [ $1 -ne 0 ]
 then
-     echo "$rerror$n :: $2.... $rfailed "
+     echo "$r error $n :: $2.... $r failed "
      exit 1
 else
-     echo " $2.... $gsucess"
+     echo " $2.... $g sucess"
 fi
 
 }
