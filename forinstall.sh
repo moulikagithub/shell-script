@@ -36,6 +36,6 @@ do
        yum install $package &>> $log_file
        validate "$?" "installing $package"
    else
-       echo -e "$y $package is already installed $n"
+       echo -e "$y $package is already installed....skipping$n"
    fi 
 done    
