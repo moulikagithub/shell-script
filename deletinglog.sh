@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source=/tmp/shellscripts-log
+source=/tmp/shellscript-log
 r="\e[31m"
 g="\e[32m"
 n="\e[0m"
@@ -9,7 +9,7 @@ n="\e[0m"
      echo -e "$r $source directory not found $n"
 fi
 
-file_delete=$(find $source -type f -mtime +14 -name "*.log"
+file_delete=$(find $source -type f -mtime +14 -name "*.log")
 
 while IFS= read -r line
 do
