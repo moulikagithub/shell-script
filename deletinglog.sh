@@ -1,11 +1,9 @@
 #!/bin/bash
 
 source=/tmp/shellscripts-log
-r="/e[31m"
-g="/e[32m"
-y="/e[33m"
-n="/e[0m"
-
+r="\e[31m"
+g="\e[32m"
+n="\e[0m"
  if [ ! -d $source ]
  then
      echo -e "$r $source directory not found $n"
