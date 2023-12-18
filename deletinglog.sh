@@ -15,6 +15,6 @@ while IFS= read -r line
 do
     echo "deleting more than 14 days old logs from $source:$line "
     
-done >>> $filedelete
+done <<< $file_delete
 
 
