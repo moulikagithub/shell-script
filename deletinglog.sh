@@ -10,21 +10,17 @@ n="\e[0m"
 fi
 
 file_delete=$(find $source -type f -mtime +14 -name "*.log")
-
-while IFS= read -r line
-do
-   if [ $? -ne 0 ]
-   then
-     echo "deleting more than 14 days old logs from $source:$line"
-   # rm -rf $line
-       
-    else
-    echo "no 14 days old log files avaliable"
-   # rm -rf $line
-   fi
-
+if [ $? -ne 0]
+then
+    echo:"no file exist"
+    exit 1
+else
+    while IFS= read -r line
+    do
+        echo "deleting more than 14 days old logs from $source:$line"
+        # rm -rf $line
     
-done <<< $file_delete
+    done <<< $file_delete
  
 
 
