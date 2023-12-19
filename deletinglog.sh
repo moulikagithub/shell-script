@@ -10,6 +10,7 @@ n="\e[0m"
 fi
 
 file_delete=$(find $source -type f -mtime +14 -name "*.log")
+
 if [ $? -ne 0 ]
 then
     echo:"no file exist"
@@ -21,6 +22,6 @@ else
         # rm -rf $line
     
     done <<< $file_delete
- 
+fi 
 
 
