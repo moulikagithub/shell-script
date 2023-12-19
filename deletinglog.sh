@@ -15,9 +15,11 @@ while IFS= read -r line
 do
    if [ $? -ne 0 ]
    then
-       echo "no 14 days old log files avaliable"
+     echo "deleting more than 14 days old logs from $source:$line"
+   # rm -rf $line
+       
     else
-    echo "deleting more than 14 days old logs from $source:$line"
+    echo "no 14 days old log files avaliable"
    # rm -rf $line
    fi
 
@@ -25,6 +27,4 @@ do
 done <<< $file_delete
  
 
-
-   # echo "more than 14 days old logs are no avaliable"
 
