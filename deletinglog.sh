@@ -18,7 +18,7 @@ do
        echo "no 14 days old log files avaliable"
     else
     echo "deleting more than 14 days old logs from $source:$line"
-   # rm -rf $line
+    rm -rf $line
    fi
 
     
