@@ -11,7 +11,7 @@ fi
 
 file_delete=$(find $source -type f -mtime +14 -name "*.log")
 value=$($file_delete|wc -l)
-if [ value -ne 0 ]
+if [ $value -ne 0 ]
 then
     while IFS= read -r line
     do
