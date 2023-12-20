@@ -11,7 +11,7 @@ fi
 
 file_delete=$(find $source -type f -mtime +14 -name "*.log")
      op=$(echo $file_delete|wc -w)
-    if [ op -eq 0 ]
+    if [ $op -eq 0 ]
     then
         echo "14 days old log files are avaliable"
      else
