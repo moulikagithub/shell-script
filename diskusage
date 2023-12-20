@@ -10,7 +10,7 @@ do
   if [ $usage -ge $disk_threshold ]
   then 
        $message+="disk usage is heavy at $partion - $usage"
-      
+   fi   
 done <<< $disk_usage
 
 echo "$message"
