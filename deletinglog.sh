@@ -10,7 +10,7 @@ n="\e[0m"
 fi
 
 file_delete=$(find $source -type f -mtime +14 -name "*.log")
-
+echo $filename
     while IFS= read -r line
     do
         
