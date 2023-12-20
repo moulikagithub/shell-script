@@ -3,7 +3,7 @@ disk_usage=$( df -HT| grep -vE 'tmp|File')
 disk_threshold=1
 message=""
 
-while IFS=read line
+while IFS= read line
 do 
    usage=$(echo $line | awk '{print $6F}' | cut -d % -f1)
    partion=$(echo $line | awk '{print $1F}')
