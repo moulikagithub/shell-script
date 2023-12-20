@@ -9,8 +9,8 @@ do
    partion=$(echo $line | awk '{print $1F}')
   if [ $usage -ge $disk_threshold ]
   then 
-       message+="disk usage is heavy at $partion - $usage"
+       message+="disk usage is heavy at $partion - $ \n"
    fi   
 done <<< $disk_usage
 
-echo "$message"
+echo -e "$message"
