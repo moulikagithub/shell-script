@@ -14,3 +14,4 @@ do
 done <<< $disk_usage
 
 echo -e "$message"
+echo "$message Date $(date)" | mail -s "message" kalidindi.moulika+test1@gmail.com
