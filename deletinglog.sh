@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source=/tmp/shellscript-log
+source=/tmp/shell-script
 r="\e[31m"
 g="\e[32m"
 n="\e[0m"
@@ -10,18 +10,18 @@ n="\e[0m"
 fi
 
 file_delete=$(find $source -type f -mtime +14 -name "*.log")
-     op=$(echo $file_delete|wc -w)
-    if [ $op -eq 0 ]
-    then
-        echo "14 days old log files are avaliable"
-     else
+     #op=$(echo $file_delete|wc -w)
+   # if [ $op -eq 0 ]
+    #then
+       # echo "14 days old log files are not avaliable"
+    # else
          while IFS= read -r line
          do
             echo "deleting more than 14 days old logs from $source:$line"
             rm -rf $line
         
         done <<< $file_delete
-    fi
+   # fi
       
     
     
