@@ -10,15 +10,15 @@
     echo "-h, displays help and exit"
   }
 
-  while getopt ":n:w:h" opt; do
+  while getopts ":n:w:h" opt; do
      case $opt in
         n) name="$optarg";;
         w) wishes="$optarg";;
         \?)echo "invalid option -"$optarg"" >&2; usage; exit;;
-         :)usage; exit;;
-         h)usage; exit;;
+        :)usage; exit;;
+        h)usage; exit;;
      esac
-   done
+  done
 
    if [ -z "$name" ] || [ -z "$wishes" ]; then
       echo "error : both -n and -w are mandatory"
