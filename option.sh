@@ -21,7 +21,7 @@
   done
 
    if [ -z "$name" ] || [ -z "$wishes" ]; then
-      echo "error : both -n and -w are mandatory"
+      echo "error :  -n is mandatory"
       usage
       exit 1
    fi
