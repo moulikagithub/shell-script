@@ -12,9 +12,9 @@
 
   while getopts ":n:w:h" opt; do
      case $opt in
-        n) name="$optarg";;
-        w) wishes="$optarg";;
-        \?)echo "invalid option -"$optarg"" >&2; usage; exit;;
+        n) name="$OPTARG";;
+        w) wishes="$OPTARG";;
+        \?)echo "invalid option -"$OPTARG"" >&2; usage; exit;;
         :)usage; exit;;
         h)usage; exit;;
      esac
@@ -24,7 +24,6 @@
       echo "error : both -n and -w are mandatory"
       usage
       exit 1
-
    fi
 
    echo "hi from $name whishing you $wishes i have been learning shell-script"
