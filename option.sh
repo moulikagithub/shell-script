@@ -1,6 +1,6 @@
 #!/bin/bash
  name=""
- wishes=""
+ wishes="good morning"
   
   usage(){
     echo "usage::$(basename $0) -n<name> -w<wishes>"
